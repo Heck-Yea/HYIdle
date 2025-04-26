@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const userForm = () => {
+const UserForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
@@ -50,4 +50,4 @@ const userForm = () => {
   );
 };
 
-export default userForm;
+export default UserForm;

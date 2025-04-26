@@ -8,7 +8,7 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
-import userForm from './components/userForm';
+import UserForm from './components/UserForm';
 
 
 const router = createBrowserRouter([
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/create-user", 
-    element: <userForm />,
+    element: <UserForm />,
   },
 ]);
 
