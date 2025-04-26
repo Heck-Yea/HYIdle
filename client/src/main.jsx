@@ -8,6 +8,8 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
+import UserForm from './components/UserForm';
+
 
 const router = createBrowserRouter([
   {
@@ -40,7 +42,12 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/create-user", 
+    element: <UserForm />,
+  },
 ]);
+
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
