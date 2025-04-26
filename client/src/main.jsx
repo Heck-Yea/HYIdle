@@ -8,7 +8,7 @@ import App from "./App";
 import Record from "./components/Record";
 import RecordList from "./components/RecordList";
 import "./index.css";
-import UserForm from './components/UserForm';
+import userForm from './components/userForm';
 
 
 const router = createBrowserRouter([
