@@ -1,27 +1,29 @@
-import { useState } from 'react';
-import Navbar from './components/Navbar';
-import UserForm from './components/UserForm';
-import Record from './components/Record';
-import RecordList from './components/RecordList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import UserForm from './components/RegisterForm';
+import Login from './components/LoginForm';
+import Game from './components/Game';
 
 function App() {
-  const [currentTab, setCurrentTab] = useState('mining');
-
   return (
-    <div>
-      <Navbar></Navbar>
-      <nav>
-        <button onClick={() => setCurrentTab('UserForm')}>UserForm</button>
-        <button onClick={() => setCurrentTab('Record')}>Record</button>
-        <button onClick={() => setCurrentTab('RecordList')}>Record List</button>          
-      </nav>
-
+    <Router>
       <div>
-        {currentTab === 'UserForm' && <UserForm />}
-        {currentTab === 'Record' && <Record />}
-        {currentTab === 'RecordList' && <RecordList />}
+        <p>howdy</p>
+        <nav>
+          <button><Link to="/register">Register</Link></button>
+          <button><Link to="/login">Login</Link></button>
+          <button><Link to="/game">Game</Link></button>
+        </nav>
+
+        <Routes>
+          {/* Define your routes */}
+          <Route path="/register" element={<UserForm />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/game" element={<Game />} />
+          <Route path="/" element={<div>Welcome to the Idle Game!</div>} />
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
 }
 
