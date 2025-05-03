@@ -1,4 +1,3 @@
-// UserForm.js
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -16,7 +15,7 @@ const UserForm = () => {
     };
     
     try {
-      const response = await axios.post('http://localhost:5000/api/users', newUser);
+      const response = await axios.post('http://localhost:5050/users', newUser);
       setMessage('User created successfully!');
     } catch (error) {
       setMessage('Error creating user!');

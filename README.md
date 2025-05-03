@@ -1,6 +1,7 @@
 SERVER DEPLOYMENT
 - Go to server directory (cd server)
-- Run: 'node --env-file=config.env server'
+- Run: node --env-file=config.env server
+- Or run: node server.js
 
 CLIENT DEPLOYMENT
 - Go to client directory (cd client)
@@ -8,4 +9,4 @@ CLIENT DEPLOYMENT
 
 TESTING SERVER
 - Go to server directory (cd server)
-- Run: 'node server.js'
+- Run: node server.js
